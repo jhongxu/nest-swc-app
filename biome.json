@@ -13,7 +13,7 @@
 		"formatter": {
 			"quoteStyle": "single"
 		},
-		"parser":{
+		"parser": {
 			"unsafeParameterDecoratorsEnabled": true
 		}
 	}
