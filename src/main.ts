@@ -12,7 +12,8 @@ async function bootstrap() {
 		new FastifyAdapter({ logger: true }),
 	);
 	const configService = app.get(ConfigService)
-	const port = configService.get<number>('SERVER_PORT')
-	await app.listen(port);
+	const port = configService.get<number>('http.port');
+	const host = configService.get<string>('http.host');
+	await app.listen(port, host);
 }
 bootstrap();
