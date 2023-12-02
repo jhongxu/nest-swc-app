@@ -1,8 +1,17 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable } from '@nestjs/common'
 
 @Injectable()
 export class AppService {
-	getHello(): string {
-		return 'Hello World!';
+	private counter = 0;
+	getHello(_a:number): string {
+		const a =1;
+		const b = 2;
+		const sum = this.getSum(a,b)
+		this.counter ++;
+		return `Hello World! ${sum} - ${this.counter} - ${_a}`;
+	}
+
+	getSum(a:number,b:number){
+		return  a+b
 	}
 }
